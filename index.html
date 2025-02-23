@@ -17,7 +17,6 @@
         <span>Your name</span>
         <div id="name">
           <input
-            id="first-name"
             type="text"
             name="first-name"
             placeholder="first-name"
@@ -26,7 +25,6 @@
             required
           />
           <input
-            id="last-name"
             type="text"
             name="last-name"
             placeholder="last-name"
@@ -51,25 +49,25 @@
       <label>
         <span>Phone*</span>
         <div id="phone">
-          <input
+          <input id="phone-first"
             type="tel"
-            name="phone"
+            name="phone-first"
             maxlength="4"
-            placeholder="+380"
-            pattern="\+380"
+            placeholder="000"
+            pattern="[0-9]{3}"
             required
           />
-          <input
+          <input id="phone-second"
             type="tel"
-            name="phone"
+            name="phone-second"
             maxlength="3"
             placeholder="000"
             pattern="[0-9]{3}"
             required
           />
-          <input
+          <input id="phone-third"
             type="tel"
-            name="phone"
+            name="phone-third"
             maxlength="4"
             placeholder="0000"
             pattern="[0-9]{4}"
