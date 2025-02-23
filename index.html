@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact form</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
-   <script defer src="./index.js"></script>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <form action="">
+      <h1>Contact form</h1>
+      <h2>Please fill in your information and we'll be sending your order.</h2>
+
+      <label>
+        <span>Your name</span>
+        <div id="name">
+          <input
+            id="first-name"
+            type="text"
+            name="first-name"
+            placeholder="first-name"
+            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            autofocus
+            required
+          />
+          <input
+            id="last-name"
+            type="text"
+            name="last-name"
+            placeholder="last-name"
+            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            required
+          />
+        </div>
+      </label>
+
+      <label>
+        <span>Your email</span>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="your@email"
+          pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+          required
+        />
+      </label>
+
+      <label>
+        <span>Phone*</span>
+        <div id="phone">
+          <input
+            type="tel"
+            name="phone"
+            maxlength="4"
+            placeholder="+380"
+            pattern="\+380"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            maxlength="3"
+            placeholder="000"
+            pattern="[0-9]{3}"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            maxlength="4"
+            placeholder="0000"
+            pattern="[0-9]{4}"
+            required
+          />
+        </div>
+      </label>
+
+      <label>
+        <span>Message subject*</span>
+        <select id="message-subject" name="message-subject">
+          <option value="other">Other</option>
+          <option value="subject1">Subject1</option>
+          <option value="subject2">Subject2</option>
+          <option value="subject3">Subject3</option>
+          <option value="subject4">Subject4</option>
+          <option value="subject5">Subject5</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Message*</span>
+        <textarea id="message" name="message"></textarea>
+      </label>
+
+      <span id="line"></span>
+
+      <button type="submit">Submit form</button>
+    </form>
+  </body>
 </html>
