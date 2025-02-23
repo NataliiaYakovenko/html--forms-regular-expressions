@@ -13,29 +13,29 @@
       <h1>Contact form</h1>
       <h2>Please fill in your information and we'll be sending your order.</h2>
 
-      <label>
-        <span>Your name</span>
-        <div id="name">
-          <input id="first-name"
-            type="text"
-            name="first-name"
-            placeholder="first-name"
-            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
-            autofocus
-            required
-          />
-          <input id="last-name"
-            type="text"
-            name="last-name"
-            placeholder="last-name"
-            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
-            required
-          />
-        </div>
-      </label>
+      <div class="field-wrapper">
+        <label for="first-name">Your name</label>
+        <input
+          id="first-name"
+          type="text"
+          name="first-name"
+          placeholder="first-name"
+          pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+          autofocus
+          required
+        />
+        <input
+          id="last-name"
+          type="text"
+          name="last-name"
+          placeholder="last-name"
+          pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+          required
+        />
+      </div>
 
-      <label>
-        <span>Your email</span>
+      <div class="field-wrapper">
+        <label for="email">Your email</label>
         <input
           id="email"
           type="email"
@@ -44,40 +44,41 @@
           pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
           required
         />
-      </label>
+      </div>
 
-      <label>
-        <span>Phone*</span>
-        <div id="phone">
-          <input id="phone-first"
-            type="tel"
-            name="phone-first"
-            maxlength="4"
-            placeholder="000"
-            pattern="[0-9]{3}"
-            required
-          />
-          <input id="phone-second"
-            type="tel"
-            name="phone-second"
-            maxlength="3"
-            placeholder="000"
-            pattern="[0-9]{3}"
-            required
-          />
-          <input id="phone-third"
-            type="tel"
-            name="phone-third"
-            maxlength="4"
-            placeholder="0000"
-            pattern="[0-9]{4}"
-            required
-          />
-        </div>
-      </label>
+      <div class="field-wrapper">
+        <label for="phone-first">Phone*</label>
+        <input
+          id="phone-first"
+          type="tel"
+          name="phone-first"
+          maxlength="4"
+          placeholder="000"
+          pattern="[0-9]{3}"
+          required
+        />
+        <input
+          id="phone-second"
+          type="tel"
+          name="phone-second"
+          maxlength="3"
+          placeholder="000"
+          pattern="[0-9]{3}"
+          required
+        />
+        <input
+          id="phone-third"
+          type="tel"
+          name="phone-third"
+          maxlength="4"
+          placeholder="0000"
+          pattern="[0-9]{4}"
+          required
+        />
+      </div>
 
-      <label>
-        <span>Message subject*</span>
+      <div class="field-wrapper">
+        <label for="message-subject">Message subject*</label>
         <select id="message-subject" name="message-subject">
           <option value="other">Other</option>
           <option value="subject1">Subject1</option>
@@ -86,16 +87,18 @@
           <option value="subject4">Subject4</option>
           <option value="subject5">Subject5</option>
         </select>
-      </label>
+      </div>
 
-      <label>
-        <span>Message*</span>
+      <div class="field-wrapper">
+        <label for="message">Message*</label>
         <textarea id="message" name="message"></textarea>
-      </label>
+      </div>
 
       <span id="line"></span>
 
-      <button type="submit">Submit form</button>
+      <div class="button-wrapper">
+        <button type="submit">Submit form</button>
+      </div>
     </form>
   </body>
 </html>
